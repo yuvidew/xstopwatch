@@ -31,7 +31,7 @@ const App = () => {
     return (
       <section className=' h-[70vh] flex items-center justify-center'>
         <div className=' w-[40%] m-auto text-center'>
-          <h1 className=' text-[2rem] mb-5'>Stop Watch</h1>
+          <h1 className=' text-[2rem] mb-5'>Stopwatch</h1>
           <p>Time : {formatTime(elapsedTime)}</p>
           <div className=' flex items-start justify-center gap-3 mt-[1rem]'>
           {!isRunning ? (
@@ -58,7 +58,7 @@ const App = () => {
                 setIsRunning(false)
               }}
             >
-              reset
+              Reset
             </button>
           </div>
         </div>
