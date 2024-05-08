@@ -21,6 +21,20 @@ const App = () => {
 
     } , [isRunning])
 
+
+    const startStopwatch = () => {
+      setIsRunning(true);
+    };
+  
+    const stopStopwatch = () => {
+      setIsRunning(false);
+    };
+  
+    const resetStopwatch = () => {
+      setElapsedTime(0);
+      setIsRunning(false);
+    };
+
     const formatTime = (time) => {
       const minutes = Math.floor(time / 60);
       const seconds = time % 60;
@@ -38,14 +52,14 @@ const App = () => {
 
             <button 
               className='py-1 px-5 bg-green-800 rounded-md'
-              onClick={() => setIsRunning(true)}
+              onClick={startStopwatch}
             >
               Start
             </button>
           ) : (
             <button 
               className='py-1 px-5 bg-red-800 rounded-md'
-              onClick={() => setIsRunning(false)}
+              onClick={stopStopwatch}
             >
               Stop
             </button>
@@ -53,10 +67,7 @@ const App = () => {
 
           <button 
               className='py-1 px-5 bg-orange-800 rounded-md'
-              onClick={() => {
-                setElapsedTime(0);
-                setIsRunning(false)
-              }}
+              onClick={resetStopwatch}
             >
               Reset
             </button>
