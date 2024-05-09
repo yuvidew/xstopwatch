@@ -30,15 +30,14 @@ const App = () => {
     };
   
     const resetStopwatch = () => {
-      setElapsedTime(0);
       setIsRunning(false);
+      setElapsedTime(0);
     };
 
     const formatTime = (time) => {
-      const minutes = Math.floor(time / 60);
-      const seconds = time % 60;
-
-      return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+      const minutes = Math.floor(time / 60).toString().padStart(2);
+      const seconds = (time % 60).toString().padStart(2, '0');
+      return `${minutes}:${seconds}`;
     }
 
     return (
