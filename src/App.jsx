@@ -11,7 +11,7 @@ const App = () => {
       if(isRunning){
         intervalId = setInterval(() => {
           setElapsedTime(prev => prev + 1)
-        } , 2000)
+        } , 1000)
       }else{
         clearInterval(intervalId)
       }
