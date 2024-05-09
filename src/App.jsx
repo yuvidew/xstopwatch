@@ -11,7 +11,7 @@ const App = () => {
       if(isRunning){
         intervalId = setInterval(() => {
           setElapsedTime(prev => prev + 1)
-        } , 100)
+        } , 2000)
       }else{
         clearInterval(intervalId)
       }
@@ -45,7 +45,7 @@ const App = () => {
       <section className=' h-[70vh] flex items-center justify-center'>
         <div className=' w-[40%] m-auto text-center'>
           <h1 className=' text-[2rem] mb-5'>Stopwatch</h1>
-          <p>Time : {formatTime(elapsedTime)}</p>
+          <p>Time:{formatTime(elapsedTime)}</p>
           <div className=' flex items-start justify-center gap-3 mt-[1rem]'>
           {!isRunning ? (
 
