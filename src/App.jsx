@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
 const App = () => {
-
     const [isRunning , setIsRunning] = useState(false)
     const [elapsedTime , setElapsedTime] = useState(0)
 
